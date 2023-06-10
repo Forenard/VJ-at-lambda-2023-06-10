@@ -1,0 +1,40 @@
+stages:
+  - fs: "Shader/2DScene.frag"
+    target: "Tex2DScene"
+    wrap_mode: repeat
+    float: true
+  - fs: "Shader/2DRes.frag"
+    target: "Tex2DRes"
+  - fs: "Shader/3DScene.frag"
+    target: "Tex3DScene"
+    float: true
+    mipmap: true
+  - fs: "Shader/3DDOF.frag"
+    target: "Tex3DDOF"
+    float: true
+    mipmap: true
+  - fs: "Shader/3DBloom.frag"
+    target: "Tex3DRes"
+    wrap: clamp
+  - fs: "Shader/UniteProcess.frag"
+    target: "TexUniteProcess"
+    float: true
+    wrap: clamp
+    filter: nearest
+  - fs: "Shader/Unite.frag"
+
+images:
+  - path: "Src/Fonts/Myrica_msdf.png"
+    name: "TexFont"
+  - path: "Src/Face/F0_Sen.png"
+    name: "TexF0"
+  - path: "Src/Face/F1_Sen.png"
+    name: "TexF1"
+  - path: "Src/Face/F2_1_Sen.png"
+    name: "TexF2"
+  - path: "Src/Face/F3_Sen.png"
+    name: "TexF3"
+  - path: "Src/Face/F4_3_Sen.png"
+    name: "TexF4"
+  - path: "Src/Face/F5_Sen.png"
+    name: "TexF5"
